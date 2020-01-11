@@ -1,11 +1,14 @@
 const express = require("express");
 const router = express.Router();
 
-//controler
-const hostedLeagues = require("./hosted-leagues");
+//controler path
+const user = require("./user");
+const league = require("./league");
 
-//hosted leagues
-router.get("/hostedleagues", hostedLeagues.get);
-router.put("/hostedleagues", hostedLeagues.put);
-router.delete("/hostedleagues", hostedLeagues.del);
+//user
+router.use("/user", user);
+
+//league
+router.use("/league", league);
+
 module.exports = router;

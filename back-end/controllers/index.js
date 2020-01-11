@@ -1,15 +1,13 @@
 const express = require("express");
 const router = express.Router();
-//controllers
-const homePage = require("./home-page/home-page");
-const poker = require("./poker");
 
-const test = require("./test/index");
+//controllers
+const homePage = require("./home-page/home-page-controller");
+const poker = require("./poker");
 
 //routes
 router.get("/", homePage);
 router.use("/poker", poker);
-router.use("/test", test);
 
 //catch all unknown routes
 router.use("*", (req, res) => {
