@@ -2,13 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 //controler path
-const user = require("./user");
 const league = require("./league");
-
-//user
-router.use("/user", user);
-
+const event = require("./event");
 //league
 router.use("/league", league);
-
+router.use("/event", event);
 module.exports = router;

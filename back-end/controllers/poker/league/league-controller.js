@@ -2,7 +2,7 @@ module.exports = {
   getLeague: (req, res) => {
     res.status(200).json("Get league details GET");
   },
-  postLeague: (req, res) => {
+  createLeague: (req, res) => {
     res.status(200).json("Create league POST");
   },
   deleteLeague: (req, res) => {
