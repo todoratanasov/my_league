@@ -16,6 +16,7 @@ module.exports = {
     res.status(200).json("User delete DELETE");
   },
   createUser: (req, res) => {
+    //create a new user
     res.status(200).json("User created POST");
   }
 };
