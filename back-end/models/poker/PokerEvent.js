@@ -9,6 +9,12 @@ const PokerEventSchema = new mongoose.Schema({
   participants: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
   isActive: { type: mongoose.Schema.Types.Boolean, default: "true" },
   results: [{ type: mongoose.Schema.Types.ObjectId, ref: "PokerResult" }],
+  eventResult: [
+    {
+      user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+      points: { type: mongoose.Schema.Types.Number, required: true }
+    }
+  ],
   league: { type: mongoose.Schema.Types.ObjectId, ref: "PokerLeague" }
 });
 
