@@ -16,15 +16,18 @@ const userSchema = new mongoose.Schema({
   salt: { type: mongoose.Schema.Types.String, required: true },
   roles: [{ type: mongoose.Schema.Types.String }],
   poker: { type: mongoose.Schema.Types.Boolean, default: "false" },
-  football: { type: mongoose.Schema.Types.Boolean, default: "false" },
-  basketball: { type: mongoose.Schema.Types.Boolean, default: "false" },
-  hostPokerLeagues: [{ type: mongoose.Schema.Types.ObjectId, ref: "League" }],
-  hostPokerEvents: [
+  pokerHostedLeagues: [
+    { type: mongoose.Schema.Types.ObjectId, ref: "PokerLeague" }
+  ],
+  pokerHostedEvents: [
     { type: mongoose.Schema.Types.ObjectId, ref: "PokerEvent" }
   ],
-  participatedEvents: [
+  pokerParticipatedEvents: [
     { type: mongoose.Schema.Types.ObjectId, ref: "PokerEvent" }
-  ]
+  ],
+  pokerResults: [{ type: mongoose.Schema.Types.ObjectId, ref: "PokerResult" }],
+  football: { type: mongoose.Schema.Types.Boolean, default: "false" },
+  basketball: { type: mongoose.Schema.Types.Boolean, default: "false" }
 });
 
 //this is the method that is going to authenticate the user
