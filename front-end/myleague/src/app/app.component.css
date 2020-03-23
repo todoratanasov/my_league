@@ -1,0 +1,20 @@
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header-container {
+  width: 100vw;
+  height: 30vh;
+  border: 1px solid red;
+  background-color: aqua;
+}
+.side-bar {
+  border: 1px solid green;
+  width: 10vw;
+  height: 60vh;
+}
+.main-display {
+  border: 1px solid blue;
+  width: 80vw;
+  height: 60vh;
+}
