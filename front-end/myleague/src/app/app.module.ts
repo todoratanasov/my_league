@@ -9,8 +9,12 @@ import { SideBarComponent } from "./poker/side-bar/side-bar.component";
 import { HomeComponent } from "./poker/home/home.component";
 import { RegisterComponent } from "./poker/user/register/register.component";
 import { LoginComponent } from "./poker/user/login/login.component";
-import { ProfileComponent } from "./poker/user/profile/profile.component";
+import { ProfileGeneralInfoComponent } from "./poker/user/profile/profile-general-info/profile-general-info.component";
 import { HostLeaguesComponent } from "./poker/leagues/host-leagues/host-leagues.component";
+import { ParticipatedLeaguesComponent } from "./poker/leagues/participated-leagues/participated-leagues.component";
+import { JoinLeagueComponent } from "./poker/leagues/join-league/join-league.component";
+import { ProfileSecurityComponent } from "./poker/user/profile/profile-security/profile-security.component";
+import { ProfilePersonalStatsComponent } from "./poker/user/profile/profile-personal-stats/profile-personal-stats.component";
 
 @NgModule({
   declarations: [
@@ -21,8 +25,12 @@ import { HostLeaguesComponent } from "./poker/leagues/host-leagues/host-leagues.
     HomeComponent,
     RegisterComponent,
     LoginComponent,
-    ProfileComponent,
-    HostLeaguesComponent
+    ProfileGeneralInfoComponent,
+    HostLeaguesComponent,
+    ParticipatedLeaguesComponent,
+    JoinLeagueComponent,
+    ProfileSecurityComponent,
+    ProfilePersonalStatsComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
